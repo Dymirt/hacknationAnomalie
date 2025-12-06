@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 altair==5.5.0
 altgraph==0.17.4
 anaconda-anon-usage @ file:///croot/anaconda-anon-usage_1732732445543/work
@@ -116,3 +117,8 @@ watchdog==6.0.0
 websockets==15.0.1
 wheel==0.45.1
 zstandard @ file:///croot/zstandard_1731356346222/work
+=======
+numpy==2.2.6
+opencv-python==4.12.0.88
+pillow==12.0.0
+>>>>>>> 78094cb8b3b79990d6b9f9ebb4cb64b4e2f0f0b9
