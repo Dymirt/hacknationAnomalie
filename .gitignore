@@ -11,3 +11,4 @@ test_tiled
 .idea
 # Virtual environments
 .venv
+*.bmp
