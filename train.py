@@ -42,9 +42,8 @@ def train_main():
 
     # 2. Model
     model = Patchcore(
-        backbone="wide_resnet50_2", 
-        pre_trained=True,
-        coreset_sampling_ratio=0.1, 
+        backbone="resnet18", 
+        pre_trained=True, 
     )
 
     # 3. Engine
