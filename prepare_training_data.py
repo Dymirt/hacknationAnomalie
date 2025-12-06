@@ -1,6 +1,6 @@
 import os
 # Importujemy Twoją funkcję z pliku crop_image.py
-from crop_image import tile_image_with_uuid
+from og.crop_image import tile_image_with_uuid
 
 def prepare_training_data(input_path, output_path):
     """
@@ -19,6 +19,9 @@ def prepare_training_data(input_path, output_path):
     # os.walk pozwala wejść głęboko w podfoldery (recursive)
     for root, dirs, files in os.walk(input_path):
         for file in files:
+            if file.find('czarno') == -1: 
+                continue
+
             # Sprawdzamy czy to obrazek
             if file.lower().endswith(valid_extensions):
                 full_path = os.path.join(root, file)
@@ -43,9 +46,9 @@ def prepare_training_data(input_path, output_path):
 # --- PRZYKŁAD UŻYCIA ---
 if __name__ == "__main__":
     # 1. Ścieżka do folderu z surowymi zdjęciami RTG (np. normalne)
-    path_in = r"../dataset/abnormal"
+    path_in = r"../dataset/normal"
     
     # 2. Gdzie mają trafić kafelki (to podasz potem do Anomalib)
-    path_out = "../dataset/abnormal_tiled"
+    path_out = "../dataset/normal_tiled"
     
     prepare_training_data(path_in, path_out)
