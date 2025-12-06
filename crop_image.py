@@ -101,7 +101,7 @@ def process_with_pil(src_path, output_folder, coords, tile_size=256, overlap_rat
     print(f"Gotowe. Utworzono {count} kafelków w '{output_folder}'.")
 
 if __name__ == "__main__":
-    plik_wejsciowy = r"C:\Users\jakub\Desktop\NAUKA\czyste\202511180023\48001F003202511180023 czarno.bmp"
+    plik_wejsciowy = r"C:\Users\gierc\PycharmProjects\PythonProject\brudne\202511190032\48001F003202511190032.bmp"
     folder_wyjsciowy = "test_tiled"
     
     print("Szukam obiektu...")
