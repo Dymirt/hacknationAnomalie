@@ -34,7 +34,7 @@ def apply_all_overlays(big_image_path: Path, overlays_dir: Path, output_path: Pa
     # Collect overlays
     overlay_paths = sorted(
         p for p in overlays_dir.iterdir()
-        if p.is_file() and p.name.endswith("_heatmap.png")
+        if p.is_file() and p.name.endswith("_overlay.png")
     )
 
     if not overlay_paths:
@@ -134,7 +134,7 @@ def main() -> None:
         overlays_dir=overlays_dir,
         output_path=output_path,
     )
-    #shutil.rmtree("anomaly_output", ignore_errors=True)
+    shutil.rmtree("anomaly_output", ignore_errors=True)
 
 
 if __name__ == "__main__":
