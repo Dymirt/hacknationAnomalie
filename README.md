@@ -11,5 +11,5 @@ System AI do automatycznej identyfikacji anomalii na obrazach RTG środków tran
 		sh ./train_model.sh
 
 ### Run anomaly detector
-		sh Usage: ./checkanomaly.sh <image_path> [output_dir]
+		sh ./checkanomaly.sh <image_path> [output_dir]
 
