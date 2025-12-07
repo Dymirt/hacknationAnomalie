@@ -1,5 +1,5 @@
-from anomalib.data import Folder
-from anomalib.models import Patchcore
+from .data import Folder
+from anomalib.modanomalibels import Patchcore
 from anomalib.engine import Engine
 from anomalib.deploy import ExportType
 
@@ -8,8 +8,8 @@ def train_main():
     datamodule = Folder(
         name="contraband_xray", 			# nazwa eksperymentu
         root=".",             				# Folder główny
-        normal_dir="cropped_images",  				# Podfolder z dobrymi (wewnątrz root)
-        abnormal_dir="cropped_images_bad", 	# Podfolder ze złymi (wewnątrz root)
+        normal_dir="normal",  				# Podfolder z dobrymi (wewnątrz root)
+        #abnormal_dir="cropped_images_bad", 	# Podfolder ze złymi (wewnątrz root)
     )
 
     model = Patchcore(
