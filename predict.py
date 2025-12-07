@@ -105,22 +105,6 @@ class PatchcoreAnomalyRunner:
             if prediction.pred_score < 0.76:
                 continue
 
-            # Create sample anomaly map
-
-            # Visualize with default settings
-            #vis = visualize_anomaly_map(anom)
-
-            # Customize visualization
-            vis = visualize_anomaly_map(
-                prediction.anomaly_map.detach().cpu().numpy()[0, 0],
-                colormap=True,      # Apply colormap
-                normalize=True      # Normalize values to [0, 255]
-            )
-
-            # vis_img is a numpy array
-            vis = self.out_dir / f"{stem}_vis.png"
-            cv2.imwrite(str(vis), cv2.cvtColor(vis, cv2.COLOR_RGB2BGR))
-
             # ---- Save heatmap only ----
             heatmap_path = self.out_dir / f"{stem}_heatmap.png"
             plt.imsave(heatmap_path, anom, cmap="jet")
