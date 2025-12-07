@@ -16,8 +16,8 @@ class XRayFilters:
                  grid_size=(8, 8),
                  sharpen_amount=2.5,
                  sharpen_blur_sigma=1.0,
-                 white_threshold=240):
-        
+                 white_threshold=244):
+
         # Parametry CLAHE
         self.clip_limit = clip_limit
         self.grid_size = grid_size

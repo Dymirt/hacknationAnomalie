@@ -60,7 +60,7 @@ class XRayImage:
         self.img = self.filters.process(self.img)
 
     # ------------------------------------------------------------------
-    def generateTiles(self, tile_size=256, min_overlap=0.5, crop_to_object=False):
+    def generateTiles(self, tile_size=128, min_overlap=0.5, crop_to_object=False):
         """
         Tworzy nakładające się kafelki (tiles) z przetworzonego obrazu.
 

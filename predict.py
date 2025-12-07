@@ -102,7 +102,7 @@ class PatchcoreAnomalyRunner:
                 elif anom.ndim == 3:
                     anom = anom[0]
                 anom = anom.numpy()
-            if prediction.pred_score < 0.76:
+            if prediction.pred_score < 0.75:
                 continue
 
             # ---- Save heatmap only ----
